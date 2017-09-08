@@ -1,3 +1,5 @@
+<h1> Projet Sécurité des applications - Injections SQL </h1>
+
 <a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
 
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
