@@ -1,6 +1,8 @@
 # sqlinjection
+M2 MIAGE - Sécurité des applications
 Projet Sécurité Formulaires
-Céline Grunenberger - Mike Froelich
+Céline Grunenberger
+Mike Froelich
 
 Travail attendu : 
 - un formulaire non sécurisé 
