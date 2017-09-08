@@ -1,2 +1,15 @@
 # sqlinjection
-Projet Sécurité Formulaires Céline Grunenberger - Mike Froelich  Travail attendu : un formulaire non sécurisé un formulaire sécurisé Mettre en évidence les 2 failles vues en cours 3 nouvelles failles :  XSS une autre faille SQL une autre faille SQL Une soutenance orale le lundi 18 Septembre (slides / démo)  Informations sur le projet : Deadline projet : Dimanche 17 Septembre Soutenance orale (10min) : Lundi 18 Septembre
+Projet Sécurité Formulaires
+Céline Grunenberger - Mike Froelich
+
+Travail attendu : 
+- un formulaire non sécurisé 
+- un formulaire sécurisé 
+- Mettre en évidence les 2 failles vues en cours 3 nouvelles failles :
+- XSS 
+- une autre faille SQL
+- une autre faille SQL
+
+Informations sur le projet :
+Deadline projet : Dimanche 17 Septembre 
+Soutenance orale (10min) : Lundi 18 Septembre
