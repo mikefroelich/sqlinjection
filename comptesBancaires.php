@@ -23,35 +23,27 @@ catch(Exception $e)
 	<?php
     if (isset($_POST['login']) AND isset($_POST['mot_de_passe']))
     {
-    // On vérifie le login / mdp
+    	// On vérifie le login / mdp
     	//var_dump($_POST);
-    	$query = "SELECT * FROM users WHERE login = '" . $_POST['login'] . "' AND password = '" . $_POST['mot_de_passe'] ."'";
-    	//var_dump($query);
-    	$reponse = $bdd->query($query);
-    	//var_dump($reponse);
+    	
+    	$query = "SELECT * FROM users WHERE login = '" . $_POST['login'] . "' AND password = '" . sha1($_POST['mot_de_passe']) ."'";
+    	var_dump($query);
+    	$reponse = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+		$userConnecte = $reponse->fetchall();
+		if(!$userConnecte){
+			echo '<p>Login ou Mot de passe incorrect</p>';
+		}
+		else {
+			// on affiche ses comptes
+			echo "<p> Bonjour <strong>" . $userConnecte[0]["login"] . "</strong>, voici vos comptes bancaires : </p>";
+			$query = "SELECT * FROM accounts WHERE owner = '" . $userConnecte[0]['id'] . "'";
+			//var_dump($query);
+			$reponse = $bdd->query($query);
 
-if($reponse == false){
-	echo '<p>Mot de passe incorrect</p>';
-	echo '<a href="form1.php"> Retour login </a>';
-}
-else {
-	
-
-	// on affiche ses comptes
-	$userConnecte = $reponse->fetchall();
-	//var_dump($userConnecte);
-
-	echo "<p> Bonjour <strong>" . $userConnecte[0]["login"] . "</strong>, voici vos comptes bancaires : </p>";
-	$query = "SELECT * FROM accounts WHERE owner = '" . $userConnecte[0]['id'] . "'";
-	$reponse = $bdd->query($query);
-
-	while ($donnees = $reponse->fetch()) {
-		echo $donnees['type'] . ' : ' . $donnees['amount'] .  '<br />';
-	}
-	
-
-	//$reponse->closeCursor();
-}
+			while ($donnees = $reponse->fetch()) {
+				echo $donnees['type'] . ' : ' . $donnees['amount'] .  '<br />';
+			}
+		}
 	
      }
      else {
@@ -60,6 +52,8 @@ else {
    
     ?>
     
+    <br/>
+    <a href="form1.php"> <-- Retour login </a>
 
 </body>
 </html>
