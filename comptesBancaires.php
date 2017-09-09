@@ -41,12 +41,12 @@ else {
 	$userConnecte = $reponse->fetchall();
 	//var_dump($userConnecte);
 
-	echo "<h2> Bonjour " . $userConnecte[0]["login"] . "</h2>";
+	echo "<p> Bonjour <strong>" . $userConnecte[0]["login"] . "</strong>, voici vos comptes bancaires : </p>";
 	$query = "SELECT * FROM accounts WHERE owner = '" . $userConnecte[0]['id'] . "'";
 	$reponse = $bdd->query($query);
 
 	while ($donnees = $reponse->fetch()) {
-		echo "Account ID : " . $donnees['id'] . ' Type : ' . $donnees['type'] . ' Amount : ' . $donnees['amount'] .  '<br />';
+		echo $donnees['type'] . ' : ' . $donnees['amount'] .  '<br />';
 	}
 	
 
