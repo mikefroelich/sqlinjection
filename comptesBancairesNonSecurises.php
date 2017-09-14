@@ -14,6 +14,8 @@ catch(Exception $e)
 <head>
 	<meta charset="utf-8" />
 	<title> Rich Bank </title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <br/>

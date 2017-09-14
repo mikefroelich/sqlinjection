@@ -2,7 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>formulaire sécurisé - Sécurité des applications</title>
+        <title>formulaire sécurisé - Sécurité des applications</title>        
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
     <p> Céline Grunenberger - Mike Froelich </p>
@@ -13,7 +14,7 @@
             <input type="text" name="login" />
             <input type="text" name="mot_de_passe" />
             
-            <input type="submit" value="Valider" />
+            <input type="submit" value="Se connecter" />
             </p>
         </form>
         <p>
