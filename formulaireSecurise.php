@@ -5,32 +5,23 @@
         <title>formulaire sécurisé - Sécurité des applications</title>        
         <link rel="stylesheet" href="style.css">
     </head>
+    <body>
+    <p> Céline Grunenberger - Mike Froelich </p>
+    <h1> Vos comptes bancaires (sécurisés)</h1>
+        <p>Veuillez entrer vos identifiants pour obtenir afficher vos comptes bancaires :</p>
+        <form action="comptesBancairesSecurises.php" method="post">
+            <p>
+            <input type="text" name="login" />
+            <input type="text" name="mot_de_passe" />
+            
+            <input type="submit" value="Se connecter" />
+            </p>
+        </form>
+        <p>
+        - M2 MIAGE - Sécurité des applications -
+        </p>
 
-    <body> 
-        <div id="zone">
-            <h1> Espace client</h1>
-                <h2>Connexion</h2>
-                <form action="comptesBancairesSecurises.php" method="post">
-                    <table>
-                        <tr>
-                            <td>    Identifiant     </td>
-                            <td>    <input type="text" name="login" />    </td>
-                        </tr>
+        <?php include("footer.php"); ?>
 
-                        <tr>
-                            <td>    Mot de passe    </td>
-                            <td>    <input type="text" name="mot_de_passe" />   </td>
-                        </tr>
-                        <td>
-                        </td>
-                            <td>
-                                <input type="submit" value="Se connecter" />
-                            </td>
-                        <tr>
-
-                    </table>
-                </form>  
-            <?php include("footer.php"); ?>
-        </div>
     </body>
 </html>

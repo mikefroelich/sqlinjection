@@ -25,7 +25,7 @@ catch(Exception $e)
 
 	<?php
 
-	echo "<p> yyre Bonjour <strong>" . $_GET["login"] . "</strong>, voici vos comptes bancaires : </p>";
+	echo "<p> Bonjour <strong>" . $_GET["login"] . "</strong>, voici vos comptes bancaires : </p>";
     //if (isset($_POST['login']) AND isset($_POST['mot_de_passe'])) {
     if (isset($_GET['login']) AND isset($_GET['mot_de_passe'])) {
 
@@ -52,13 +52,9 @@ catch(Exception $e)
 			//var_dump($userConnecte);
 			//echo "<p> Bonjour <strong>" . $userConnecte[0]["login"] . "</strong>, voici vos comptes bancaires : </p>";
 			
-			<p> Patate </p>
-			<table>			
 			foreach ($userConnecte as $i => $account) {
 				echo $userConnecte[$i]['type'] . ' : ' . $userConnecte[$i]['amount'] .  '<br />';
-
-			</table>
-						}
+			}
 			
 			
 		}

@@ -19,11 +19,10 @@ catch(Exception $e)
 </head>
 <body>
 <br/>
-<div id="zone1">
+
 <a href="formulaireSecurise.php"> <-- retour </a>
 
-<h1> testseVos comptes bancaires (sécurisés) </h1>
-
+<h1> Vos comptes bancaires (sécurisés) </h1>
 
 
 
@@ -48,30 +47,18 @@ catch(Exception $e)
 			echo '<p>Login ou Mot de passe incorrect</p>';
 		}
 		else {
-						
+			
 			//var_dump($userConnecte);
 			echo "<p> Bonjour <strong>" . $userConnecte[0]["login"] . "</strong>, voici vos comptes bancaires : </p>";
-			?>
 			
-			<table>
-			<?php
-			foreach ($userConnecte as $i => $account) {				
-				?>
-				<tr>
-					<td> <?php echo $userConnecte[$i]['type'] ?> </td>
-					<td> <?php echo $userConnecte[$i]['amount'] ?> </td>
-				<tr>	
-			<?php 
-			} 
-			?>
-			</table>
-			</div>
-			<?php
+			foreach ($userConnecte as $i => $account) {
+				echo $userConnecte[$i]['type'] . ' : ' . $userConnecte[$i]['amount'] .  '<br />';
+			}
+			
 			
 		}
 	
      }
-	 
      else {
      	echo '<p>Erreur</p>';
      }
