@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Sécurité des applications</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style_unsecure.css">
     </head>
     <body>
     <div id="zone">
@@ -24,7 +24,7 @@
                 <td>
                 </td>
                     <td>
-                        <input id="button" type="submit" value="Se connecter" />
+                        <input type="submit" value="Se connecter" />
                     </td>
                 <tr>
 
