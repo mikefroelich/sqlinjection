@@ -1,4 +1,3 @@
-
 <?php
 try
 {
@@ -19,13 +18,7 @@ catch(Exception $e)
 </head>
 <body>
 <br/>
-
-<a href="formulaireSecurise.php"> <-- retour </a>
-
-<h1> Vos comptes bancaires (sécurisés) </h1>
-
-
-
+<h1> Espace personnel <a href="formulaireSecurise.php"> <img src="logging-out.png" alt="Déconnexion" /> </a></h1> 
 	<?php
 
     if (isset($_POST['login']) AND isset($_POST['mot_de_passe'])) {
@@ -46,26 +39,35 @@ catch(Exception $e)
 		if(!$userConnecte){
 			echo '<p>Login ou Mot de passe incorrect</p>';
 		}
-		else {
-			
+		else {									
 			//var_dump($userConnecte);
-			echo "<p> Bonjour <strong>" . $userConnecte[0]["login"] . "</strong>, voici vos comptes bancaires : </p>";
-			
-			foreach ($userConnecte as $i => $account) {
-				echo $userConnecte[$i]['type'] . ' : ' . $userConnecte[$i]['amount'] .  '<br />';
-			}
-			
-			
-		}
-	
+
+			?>			
+			<h2> Comptes & Contrats </h2> 
+			<?php
+			echo "<p> Monsieur " . $userConnecte[0]["login"] . "</p>";
+			?>
+						
+			<table id="tableau">
+			<?php
+			foreach ($userConnecte as $i => $account) {				
+				?>
+				<tr>
+					<td id="compte"> <?php echo $userConnecte[$i]['type'] ?> </td>
+					<td id="montant"> + <?php echo $userConnecte[$i]['amount'] ?> EUR </td>
+				<tr>	
+			<?php 
+			} 
+			?>
+			</table>
+			</div>
+			<?php			
+		}	
      }
+	 
      else {
      	echo '<p>Erreur</p>';
      }
-   
     ?>
-    
-    
-
 </body>
 </html>
