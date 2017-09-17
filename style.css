@@ -3,7 +3,7 @@ body
 	background-color: #EFEFEF;
 	font-family: Arial;
 	color : black;
-	width: 800px;
+	width: 600px;
 	margin: 0 20px 20px 20px;
 }
 div
@@ -63,7 +63,7 @@ tr
 input[type="submit"]
 {
 	text-align: center;
-	width: 94%;	
+	width: 84%;	
 	background-color: #002FA7;
 	border-color: #002FA7;
 	color: white;

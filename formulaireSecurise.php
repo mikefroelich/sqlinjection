@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php 
+
+session_start();
+$token = bin2hex(mcrypt_create_iv(32, MCRYPT_DEV_URANDOM));
+$_SESSION['token'] = $token;
+?>
+
 <html>
     <head>
         <meta charset="utf-8" />
@@ -29,6 +36,7 @@
                         <tr>
 
                     </table>
+                    <input type="hidden" name="token" id="token" value="<?php echo $token; ?>" />
                 </form>  
             <?php include("footer.php"); ?>
         </div>

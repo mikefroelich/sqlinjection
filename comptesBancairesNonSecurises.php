@@ -8,6 +8,7 @@ catch(Exception $e)
 	die('Erreur : '.$e->getMessage());
 }
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +18,8 @@ catch(Exception $e)
 </head>
 <body>
 <br/>
-<h1> Espace personnel <a href="formulaireSecurise.php"> <img src="logging-out.png" alt="Déconnexion" /> </a></h1> 
+
+<h1> Espace personnel <a href="formulaireNonSecurise.php"> <img src="logging-out.png" alt="Déconnexion" /> </a></h1> 
 
 	<?php
     //if (isset($_POST['login']) AND isset($_POST['mot_de_passe'])) {
